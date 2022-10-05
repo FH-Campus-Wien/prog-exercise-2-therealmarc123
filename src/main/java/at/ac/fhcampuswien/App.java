@@ -59,7 +59,20 @@ public class App {
     }
     //todo Task 3
     public void printPyramid(){
-        // input your solution here
+        int ROWS = 6;
+        int x = 0;
+
+
+        for (int count1 = 1; count1 <= ROWS; count1++) {
+            for (int count2 = count1; count2 < ROWS;count2++) {
+                System.out.print(" ");
+            }
+
+            for (int count3 = 0; count1*2-1 > count3; count3++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
     }
 
     //todo Task 4
