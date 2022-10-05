@@ -6,14 +6,57 @@ public class App {
 
     //todo Task 1
     public void largestNumber(){
-        // input your solution here
+        double x = 0;
+        double y = 0;
+        int count = 0;
+        Scanner var = new Scanner(System.in);
+
+        System.out.print("Number 1: ");
+        y = var.nextInt();
+
+
+    while (y > 0) {
+        if (x > y) {
+            count++;
+            System.out.print("Number " + (1 + count) + ": ");
+            y = var.nextInt();
+        } else {
+            x = y;
+            count++;
+            System.out.print("Number " + (1 + count) + ": ");
+            y = var.nextInt();
+        }
+    }
+
+
+        if (x <= 0) {
+            System.out.println("No number entered.");
+        }
+        else {
+            System.out.println("The largest number is " + String.format("%.2f", x) );
+        }
     }
 
     //todo Task 2
-    public void stairs(){
-        // input your solution here
-    }
+    public void stairs() {
+        int x = 0;
+        int num = 0;
+        Scanner var = new Scanner(System.in);
 
+        System.out.print("n: ");
+        x = var.nextInt();
+        if (x <= 0) {
+            System.out.println("Invalid number!");
+        }
+
+        for (int count1 = 1; count1 <= x; count1++) {
+            for (int count2 = 0; count2 < count1; count2++) {
+            num++;
+                System.out.print(num + " ");
+            }
+            System.out.println();
+        }
+    }
     //todo Task 3
     public void printPyramid(){
         // input your solution here
