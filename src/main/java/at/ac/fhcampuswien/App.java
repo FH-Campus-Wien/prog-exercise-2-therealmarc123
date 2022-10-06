@@ -82,7 +82,48 @@ public class App {
 
     //todo Task 5
     public void marks(){
-        // input your solution here
+        double x = 0;
+        double y = 0;
+        int neg = 0;
+        int num = 1;
+        int num2 = 0;
+        double avg;
+
+        Scanner var = new Scanner(System.in);
+
+        System.out.print("Mark 1: ");
+        x = var.nextInt();
+    while (x != 0) {
+        while (x >= 1 & x <= 5) {
+            num++;
+            num2++;
+            y += x;
+            if (x == 5) {
+                neg++;
+            }
+
+            System.out.print("Mark " + num + ": ");
+            x = var.nextDouble();
+
+        }
+        while (x < 0 || x > 5) {
+            System.out.println("Invalid mark!");
+            System.out.print("Mark " + num + ": ");
+            x = var.nextDouble();
+        }
+    }
+
+        if (x == 0) {
+            avg = y/num2;
+            if (y == 0 && num2 == 0){
+                System.out.println("Average: 0.00");
+            }
+            else {
+                System.out.println("Average: " + String.format("%.2f", avg));
+            }
+            System.out.println("Negative marks: " + neg);
+        }
+
     }
 
     //todo Task 6
