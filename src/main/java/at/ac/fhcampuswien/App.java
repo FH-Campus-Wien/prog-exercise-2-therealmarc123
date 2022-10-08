@@ -128,7 +128,35 @@ public class App {
 
     //todo Task 6
     public void happyNumbers(){
-        // input your solution here
+        int num0;
+        int num1;
+        int sum = 0;
+
+        Scanner var = new Scanner( System.in );
+
+        System.out.print( "n: " );
+        num0 = var.nextInt();
+
+        while( num0 > 9 )
+        {
+            while( num0 > 0 )
+            {
+                num1 = num0 % 10;
+                sum = sum + num1 * num1;
+                num0 = num0/10;
+            }
+
+            num0 = sum;
+            sum = 0;
+        }
+
+        if( num0 == 1 ) {
+            System.out.println("Happy number!");
+        }
+
+        else {
+            System.out.println("Sad number!");
+        }
     }
 
     public static void main(String[] args){
