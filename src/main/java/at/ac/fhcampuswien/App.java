@@ -94,7 +94,7 @@ public class App {
         else{
             for(int x = 1; x <= (height / 2) + 1; x++)
             {
-                for(int y = 1; y <= height - x - 2; y++)
+                for(int y = 1; y <= height - (height / 2) - x; y++)
                 {
                     System.out.print(" ");
                 }
@@ -113,7 +113,7 @@ public class App {
 
             for(int x = (height / 2); x >= 1; x--)
             {
-                for(int y = 1; y <= height - x - 2; y++)
+                for(int y = 1; y <= height - (height / 2) - x; y++)
                 {
                     System.out.print(" ");
                 }
