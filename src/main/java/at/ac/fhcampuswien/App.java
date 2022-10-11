@@ -77,7 +77,60 @@ public class App {
 
     //todo Task 4
     public void printRhombus(){
-        // input your solution here
+
+        char character;
+        int height;
+
+        Scanner var = new Scanner(System.in);
+
+        System.out.print("h: ");
+        height = var.nextInt();
+        System.out.print("c: ");
+        character = var.next().charAt(0);
+
+        if(height % 2 == 0){
+            System.out.println("Invalid number!");
+        }
+        else{
+            for(int x = 1; x <= (height / 2) + 1; x++)
+            {
+                for(int y = 1; y <= height - x - 2; y++)
+                {
+                    System.out.print(" ");
+                }
+
+                for(int z = x; z >= 1; z--)
+                {
+                    System.out.print((char) (character - z + 1));
+                }
+
+                for(int k = 2; k <= x; k++)
+                {
+                    System.out.print((char) (character - k + 1));
+                }
+                System.out.println();
+            }
+
+            for(int x = (height / 2); x >= 1; x--)
+            {
+                for(int y = 1; y <= height - x - 2; y++)
+                {
+                    System.out.print(" ");
+                }
+
+                for(int z = x; z >= 1; z--)
+                {
+                    System.out.print((char) (character - z + 1));
+                }
+
+                for(int k = 2; k <= x; k++)
+                {
+                    System.out.print((char) (character - k + 1));
+                }
+                System.out.println();
+
+            }
+        }
     }
 
     //todo Task 5
@@ -133,24 +186,22 @@ public class App {
         int sum = 0;
 
         Scanner var = new Scanner( System.in );
-
-        System.out.print( "n: " );
+        System.out.print("n: ");
         num0 = var.nextInt();
 
-        while( num0 > 9 )
+        while(num0 > 9)
         {
-            while( num0 > 0 )
+            while(num0 > 0)
             {
                 num1 = num0 % 10;
                 sum = sum + num1 * num1;
                 num0 = num0/10;
             }
-
             num0 = sum;
             sum = 0;
         }
 
-        if( num0 == 1 ) {
+        if(num0 == 1) {
             System.out.println("Happy number!");
         }
 
